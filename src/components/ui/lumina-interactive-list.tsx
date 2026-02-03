@@ -100,17 +100,17 @@ export function Component() {
                 description: "The rise of AI-powered financial modeling and its impact on traditional analysis.", 
                 media: "/images/adam-nir-wTO6MWpMrJk-unsplash.jpg",
                 findings: [
-                    "AI financial modelling is a new type of technology that has caused concern for many students looking into jobs in the space",
-                    "Many analysts at banks and accounting firms spend the majority of their early careers working on models and reading financial statements",
-                    "Predictive models use historical data and machine learning algorithms to forecast future financial results like revenue or cash flows",
-                    "Optimization models leverage AI to find the best solutions for complex financial problems such as portfolio allocation or capital budgeting",
-                    "Risk assessment models analyze multiple risk factors and scenarios to evaluate potential financial risks and suggest mitigation strategies"
+                    "AI financial modeling is causing concern for students entering the field",
+                    "Early-career analysts traditionally spend years on models and financial statements",
+                    "Predictive models forecast revenue and cash flows using ML algorithms",
+                    "Optimization models solve complex problems like portfolio allocation",
+                    "Risk models evaluate financial risks and suggest mitigation strategies"
                 ]
             },
             { 
                 title: "The Hiring Shift", 
                 description: "How analytics recruitment is evolving in an AI-driven world.", 
-                media: "/images/jeff.png",
+                media: "/images/maria-del-mar-garcia-zRwVrOA4n6A-unsplash.jpg",
                 findings: [
                     "Traditional analyst tasks (spreadsheets, calculations, reports) are now largely automated by AI",
                     "Hiring has shifted toward judgment, with employers seeking analysts who can interpret and act on AI outputs",
