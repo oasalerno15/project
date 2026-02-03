@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --font-mono: "PPSupplyMono", monospace;
-  --font-sans: "PP Neue Montreal", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Cormorant Garamond", serif;
   --color-bg: #0a0a0a;
   --color-text: #ffffff;
@@ -375,18 +377,4 @@ html, body {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-/* Fallback for PP Neue Montreal - use Inter as similar alternative */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
-
-:root {
-  --font-sans: "Inter", system-ui, sans-serif;
-}
-
-/* Fallback for PPSupplyMono - use JetBrains Mono as similar alternative */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-
-:root {
-  --font-mono: "JetBrains Mono", monospace;
 }
