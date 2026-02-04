@@ -161,6 +161,23 @@ export function Component() {
                     "Develop your unique human edge: creativity, judgment, empathy",
                     "Stay curious—the landscape will keep evolving"
                 ]
+            },
+            { 
+                title: "Works Cited", 
+                description: "Sources and references for this presentation.", 
+                media: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&h=1200&fit=crop",
+                findings: [
+                    "Córdova, Pamela, et al. \"Leveraging AI Tools in Finance Education.\" Cogent Education, vol. 11, no. 1, Nov. 2024.",
+                    "Cutsinger, Bryan. \"AI Killed the Business Major? Not so Fast.\" The Hill, 18 Sept. 2025.",
+                    "Goldman Sachs. \"Generative AI Could Raise Global GDP by 7%.\" 5 Apr. 2023.",
+                    "\"How AI Is Changing Careers in Banking and Finance.\" MIT, 15 Aug. 2025.",
+                    "\"How AI Is Transforming the Finance Industry.\" LHH, 2026.",
+                    "Machovec, Christine, et al. \"Incorporating AI Impacts in BLS Employment Projections.\" Bureau of Labor Statistics, 10 Feb. 2025.",
+                    "Masterson, Victoria. \"Future of Jobs: Most In-Demand Core Skills in 2023.\" World Economic Forum, 2023.",
+                    "Schmidt, Jeff. \"AI in Financial Modeling.\" Corporate Finance Institute, 2015.",
+                    "Columbia Business School. \"Using AI in the Classroom.\" 13 Sept. 2024.",
+                    "World Economic Forum. Future of Jobs Report 2023. May 2023."
+                ]
             }
         ];
         
@@ -263,6 +280,13 @@ export function Component() {
                 overlay.classList.add('visible');
                 contentEl?.classList.add('expanded');
                 
+                // Add works-cited class for the citations slide (index 8)
+                if (currentSlideIndex === 8) {
+                    findingsEl.classList.add('works-cited');
+                } else {
+                    findingsEl.classList.remove('works-cited');
+                }
+                
                 // Show findings
                 const currentFindings = slides[currentSlideIndex].findings;
                 findingsEl.innerHTML = currentFindings.map((f) => 
@@ -292,6 +316,7 @@ export function Component() {
             
             if (findingsEl) {
                 findingsEl.innerHTML = '';
+                findingsEl.classList.remove('works-cited');
                 gsap.set(findingsEl, { opacity: 0 });
             }
             if (hintEl) hintEl.textContent = 'Click to explore ↓';
@@ -359,6 +384,11 @@ export function Component() {
                             gsap.set(children, { opacity: 0, y: 0 });
                             gsap.to(children, { opacity: 1, duration: 0.1, stagger: 0.05, ease: "none" });
                             gsap.to(descEl, { y: 0, opacity: 1, duration: 0.8, delay: 0.5, ease: "power3.out" });
+                            break;
+                        case 8: // Fade In (Works Cited)
+                            gsap.set(children, { opacity: 0, scale: 0.95 });
+                            gsap.to(children, { opacity: 1, scale: 1, duration: 1, stagger: 0.02, ease: "power2.out" });
+                            gsap.to(descEl, { y: 0, opacity: 1, duration: 0.8, delay: 0.3, ease: "power2.out" });
                             break;
                         default: // Fallback
                             gsap.set(children, { y: 20 });

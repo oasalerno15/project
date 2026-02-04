@@ -172,6 +172,8 @@ html, body {
 .slide-content.expanded {
   z-index: 150;
   max-width: 75vw;
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
 @media (max-width: 768px) {
@@ -236,6 +238,19 @@ html, body {
   padding: 0.9rem 0;
   padding-left: 1.75rem;
   position: relative;
+}
+
+/* Works Cited specific styling - smaller text for citations */
+.slide-findings.works-cited .finding-item {
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  line-height: 1.5;
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slide-findings.works-cited .finding-item::before {
+  font-size: 1em;
 }
 
 .finding-item::before {
